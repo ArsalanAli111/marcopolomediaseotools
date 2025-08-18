@@ -33,7 +33,7 @@ export function Header() {
               <Bot className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="font-headline text-xl font-bold text-gradient">
+              <h1 className="font-headline text-xl font-bold text-gradient-green">
                 MarcoPolo
               </h1>
               <p className="text-sm text-muted-foreground">Media Optimizer</p>
@@ -54,7 +54,7 @@ export function Header() {
             <Bot className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="font-headline text-xl font-bold text-gradient">
+            <h1 className="font-headline text-xl font-bold text-gradient-green">
               MarcoPolo
             </h1>
             <p className="text-sm text-muted-foreground">Media Optimizer</p>

@@ -2,7 +2,7 @@
 import { PageSpeedAnalyzer } from "@/components/features/page-speed-analyzer";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import Link from "next/link";
-import { ArrowRight, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, Tags } from "lucide-react";
+import { ArrowRight, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, Tags, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 
 const tools = [
@@ -46,17 +46,36 @@ const tools = [
 
 export function DashboardPage() {
     return (
-        <div className="space-y-8">
-            <PageSpeedAnalyzer />
+        <div className="space-y-12">
+            <section className="text-center bg-card border rounded-xl p-8 md:p-12 lg:p-16">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gradient-green">
+                Supercharge Your SEO
+              </h1>
+              <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                Welcome to MarcoPolo, your all-in-one AI toolkit for dominating search rankings and optimizing your content strategy. Start with a free page speed analysis below.
+              </p>
+              <div className="mt-8 flex justify-center">
+                <Button size="lg" asChild>
+                  <Link href="#page-speed">
+                    Analyze Your Site
+                    <Zap className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </section>
+            
+            <div id="page-speed">
+              <PageSpeedAnalyzer />
+            </div>
             
             <div className="text-center">
-                 <h2 className="text-3xl font-bold tracking-tight text-gradient">All Tools</h2>
+                 <h2 className="text-3xl font-bold tracking-tight text-gradient-green">All Tools</h2>
                  <p className="text-muted-foreground mt-2">Explore our full suite of optimization tools.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool) => (
-                    <Card key={tool.href} className="flex flex-col">
+                    <Card key={tool.href} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
                         <CardHeader className="flex flex-row items-center gap-4">
                             {tool.icon}
                             <div>
@@ -65,7 +84,7 @@ export function DashboardPage() {
                             </div>
                         </CardHeader>
                         <div className="flex-grow" />
-                        <div className="p-6 pt-0">
+                        <div className="p-6 pt-0 mt-auto">
                             <Link href={tool.href} passHref>
                                 <Button variant="outline" className="w-full">
                                     Use Tool <ArrowRight className="ml-2 h-4 w-4" />

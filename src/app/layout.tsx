@@ -24,11 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="font-body antialiased dark flex flex-col min-h-screen">
+      <body className="font-body antialiased flex flex-col min-h-screen">
         <TooltipProvider>
           <Header />
           <main className="flex-grow flex flex-col items-center p-4 sm:p-8 md:p-12">
-            <div className="w-full max-w-6xl">
+            <div className="w-full max-w-7xl">
               {children}
             </div>
           </main>
