@@ -28,7 +28,7 @@ export function Header() {
     // Render a placeholder or null on the server to avoid hydration errors
     return (
       <header className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
            <Link href="/" className="flex items-center gap-2 flex-1">
              <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={150} height={33} unoptimized />
           </Link>
@@ -41,7 +41,7 @@ export function Header() {
   
   return (
     <header className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 flex-1">
           <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={150} height={33} unoptimized />
         </Link>
