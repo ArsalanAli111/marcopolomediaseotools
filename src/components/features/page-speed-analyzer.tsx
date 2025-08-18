@@ -11,10 +11,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Loader2, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Loader2, Zap, AlertTriangle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { analyzePageSpeedFromUrlAction } from '@/lib/actions';
-import { Progress } from '@/components/ui/progress';
 
 interface SpeedResult {
   score: number;
