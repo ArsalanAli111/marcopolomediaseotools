@@ -3,9 +3,16 @@ import { Sidebar, SidebarContent, SidebarHeader, SidebarInset, SidebarMenu, Side
 import { Bot, Captions, FileText, Gauge, Image as ImageIcon, Lightbulb, Megaphone, Search } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
 
     const menuItems = [
         { href: "/speed", icon: <Gauge />, label: "Page Speed" },
@@ -16,6 +23,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         { href: "/density", icon: <Search />, label: "Density" },
         { href: "/banner", icon: <Megaphone />, label: "Banner" },
     ];
+
+    if (!isClient) {
+        return null;
+    }
 
     return (
         <>
