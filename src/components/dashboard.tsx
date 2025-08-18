@@ -25,7 +25,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                                 <Bot className="h-6 w-6" />
                             </div>
                             <div>
-                                <h1 className="font-headline text-xl font-bold text-primary">
+                                <h1 className="font-headline text-xl font-bold text-gradient">
                                     MarcoPolo
                                 </h1>
                                 <p className="text-sm text-muted-foreground">Media Optimizer</p>
@@ -50,7 +50,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                          <header className="mb-8 flex items-center justify-between md:hidden">
                             <div className="flex items-center gap-4">
                                 <SidebarTrigger/>
-                                <h1 className="font-headline text-2xl font-bold text-primary">
+                                <h1 className="font-headline text-2xl font-bold text-gradient">
                                    MarcoPolo
                                 </h1>
                             </div>

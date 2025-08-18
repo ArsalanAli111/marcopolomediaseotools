@@ -90,3 +90,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+  }
+}
