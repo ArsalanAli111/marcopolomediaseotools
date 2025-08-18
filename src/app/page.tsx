@@ -1,7 +1,7 @@
-import { SpeedPage } from "@/components/pages/speed";
+import { DashboardPage } from "@/components/pages/dashboard";
 
 export default function Home() {
   return (
-    <SpeedPage />
+    <DashboardPage />
   );
 }
