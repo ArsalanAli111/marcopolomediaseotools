@@ -2,7 +2,7 @@
 import { PageSpeedAnalyzer } from "@/components/features/page-speed-analyzer";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import Link from "next/link";
-import { ArrowRight, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, Tags, Zap } from "lucide-react";
+import { ArrowRight, Bot, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, ShieldCheck, Smile, Tags, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 
 const tools = [
@@ -96,6 +96,39 @@ export function DashboardPage() {
                     </Card>
                 ))}
             </div>
+
+            <section className="py-12 lg:py-20">
+              <div className="container mx-auto text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gradient">Why Choose MarcoPolo?</h2>
+                <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+                  We provide the sharpest tools to help you navigate the digital landscape and conquer search rankings.
+                </p>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="p-4 bg-primary/10 rounded-full">
+                      <Bot className="h-10 w-10 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">AI-Powered Precision</h3>
+                    <p className="text-muted-foreground">Harness cutting-edge AI for data-driven SEO recommendations that give you a competitive edge.</p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="p-4 bg-primary/10 rounded-full">
+                      <ShieldCheck className="h-10 w-10 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">Comprehensive Toolkit</h3>
+                    <p className="text-muted-foreground">Access a full suite of tools covering everything from page speed and meta tags to keyword analysis.</p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="p-4 bg-primary/10 rounded-full">
+                      <Smile className="h-10 w-10 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">User-Friendly Interface</h3>
+                    <p className="text-muted-foreground">Our intuitive dashboard makes it easy for anyone, from beginners to experts, to optimize their site.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
         </div>
     )
 }
