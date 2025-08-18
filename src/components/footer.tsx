@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Bot } from 'lucide-react';
+import { Bot, Linkedin, Twitter } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -43,9 +43,14 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              {/* Add social media links here if you have them */}
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="h-6 w-6" />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="h-6 w-6" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>
