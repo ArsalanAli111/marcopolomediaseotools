@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Bot } from 'lucide-react';
+import { Bot, Gauge, FileText, Captions, ImageIcon, Tags, Percent, GalleryHorizontal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
@@ -14,13 +14,13 @@ export function Header() {
   }, []);
 
   const menuItems = [
-    { href: "/speed", label: "Page Speed" },
-    { href: "/meta", label: "Meta Desc" },
-    { href: "/headings", label: "Headings" },
-    { href: "/images", label: "Images" },
-    { href: "/keywords", label: "Keywords" },
-    { href: "/density", label: "Density" },
-    { href: "/banner", label: "Banner" },
+    { href: "/speed", icon: <Gauge className="h-4 w-4" />, label: "Page Speed" },
+    { href: "/meta", icon: <FileText className="h-4 w-4" />, label: "Meta Desc" },
+    { href: "/headings", icon: <Captions className="h-4 w-4" />, label: "Headings" },
+    { href: "/images", icon: <ImageIcon className="h-4 w-4" />, label: "Images" },
+    { href: "/keywords", icon: <Tags className="h-4 w-4" />, label: "Keywords" },
+    { href: "/density", icon: <Percent className="h-4 w-4" />, label: "Density" },
+    { href: "/banner", icon: <GalleryHorizontal className="h-4 w-4" />, label: "Banner" },
   ];
 
   if (!isClient) {
@@ -47,12 +47,13 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
+                'flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary',
                 pathname === item.href || (pathname === '/' && item.href === '/speed')
                   ? 'text-primary'
                   : 'text-muted-foreground'
               )}
             >
+              {item.icon}
               {item.label}
             </Link>
           ))}
