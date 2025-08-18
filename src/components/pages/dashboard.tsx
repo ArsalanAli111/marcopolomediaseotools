@@ -5,7 +5,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import Link from "next/link";
 import { ArrowRight, Bot, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, ShieldCheck, Smile, Tags, Zap } from "lucide-react";
 import { Button } from "../ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 const tools = [
   {
@@ -94,8 +94,6 @@ export function DashboardPage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
               </Carousel>
             </section>
             
