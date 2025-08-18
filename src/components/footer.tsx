@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
-import { Bot, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -9,15 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-start space-y-4">
              <Link href="/" className="flex items-center gap-2">
-                <div className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-lg p-2">
-                  <Bot className="h-6 w-6" />
-                </div>
-                <div>
-                  <h1 className="font-headline text-xl font-bold text-gradient">
-                    MarcoPolo
-                  </h1>
-                  <p className="text-sm text-muted-foreground">Media Optimizer</p>
-                </div>
+                <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={180} height={40} unoptimized />
               </Link>
             <p className="text-sm text-muted-foreground">
               AI-powered SEO and content optimization tools to supercharge your digital presence.
