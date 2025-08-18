@@ -43,6 +43,7 @@ export function Header() {
                   : 'text-muted-foreground'
               )}
             >
+              {item.icon}
               {item.label}
             </Link>
           ))}
