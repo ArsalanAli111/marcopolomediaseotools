@@ -1,3 +1,4 @@
+
 'use client';
 import { PageSpeedAnalyzer } from "@/components/features/page-speed-analyzer";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
@@ -49,10 +50,10 @@ export function DashboardPage() {
         <div className="space-y-12">
             <section className="text-center bg-[#121212] rounded-xl p-8 md:p-12 lg:p-16">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
-                Supercharge Your <span className="text-gradient">SEO</span>
+                The All-in-One <span className="text-gradient">SEO</span> Solution Platform
               </h1>
               <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Welcome to MarcoPolo, your all-in-one AI toolkit for dominating search rankings and optimizing your content strategy. Start with a free page speed analysis below.
+                Everything you need to boost rankings, optimize content, and drive more traffic. MarcoPolo provides a complete suite of AI-powered tools for your success.
               </p>
               <div className="mt-8 flex justify-center">
                 <Button size="lg" asChild>
