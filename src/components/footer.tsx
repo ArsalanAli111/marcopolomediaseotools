@@ -1,5 +1,6 @@
+
 import Link from 'next/link';
-import { Bot, Linkedin, Twitter } from 'lucide-react';
+import { Bot, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -50,6 +51,14 @@ export function Footer() {
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook className="h-6 w-6" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="h-6 w-6" />
+                <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>
