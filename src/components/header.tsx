@@ -47,7 +47,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary',
+                'flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary whitespace-nowrap',
                 pathname === item.href || (pathname === '/' && item.href === '/speed')
                   ? 'text-primary'
                   : 'text-muted-foreground'
