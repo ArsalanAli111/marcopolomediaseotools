@@ -20,7 +20,7 @@ export function Header() {
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 flex-1">
           <div className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-lg p-2">
             <Bot className="h-6 w-6" />
           </div>
@@ -31,7 +31,7 @@ export function Header() {
             <p className="text-sm text-muted-foreground">Media Optimizer</p>
           </div>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 justify-center flex-1">
           {menuItems.map((item) => (
             <Link
               key={item.href}
@@ -47,6 +47,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        <div className="flex-1"></div>
       </div>
     </header>
   );
