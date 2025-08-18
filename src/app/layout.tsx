@@ -2,8 +2,9 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { SidebarProvider } from '@/components/ui/sidebar';
 import { Inter } from 'next/font/google';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,11 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="font-body antialiased dark">
+      <body className="font-body antialiased dark flex flex-col min-h-screen">
         <TooltipProvider>
-          <SidebarProvider>
-            {children}
-          </SidebarProvider>
+          <Header />
+          <main className="flex-grow flex flex-col items-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-6xl">
+              {children}
+            </div>
+          </main>
+          <Footer />
         </TooltipProvider>
         <Toaster />
       </body>
