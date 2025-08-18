@@ -20,9 +20,19 @@ interface SpeedResult {
   suggestions: string[];
 }
 
+const defaultResult: SpeedResult = {
+  score: 92,
+  suggestions: [
+    'Eliminate render-blocking resources by inlining critical CSS.',
+    'Serve images in next-gen formats like WebP.',
+    'Minify JavaScript and CSS files to reduce their size.',
+    'Leverage browser caching for static assets.',
+  ]
+};
+
 export function PageSpeedAnalyzer() {
-  const [url, setUrl] = useState('');
-  const [result, setResult] = useState<SpeedResult | null>(null);
+  const [url, setUrl] = useState('https://marcopolo.ai');
+  const [result, setResult] = useState<SpeedResult | null>(defaultResult);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 

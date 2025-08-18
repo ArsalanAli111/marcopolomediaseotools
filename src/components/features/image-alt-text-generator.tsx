@@ -21,8 +21,8 @@ import { CopyButton } from '../copy-button';
 import { Textarea } from '../ui/textarea';
 
 export function ImageAltTextGenerator() {
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [result, setResult] = useState<string>('');
+  const [imagePreview, setImagePreview] = useState<string | null>("https://placehold.co/600x400.png");
+  const [result, setResult] = useState<string>('A sleek, modern laptop displaying colorful charts and graphs on a clean desk, symbolizing data-driven business growth and technology.');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
@@ -47,6 +47,16 @@ export function ImageAltTextGenerator() {
     const imageFile = formData.get('image') as File;
 
     if (!imageFile || imageFile.size === 0) {
+      // If there's a preview but no file, it means they want to use the default.
+      // We can't actually process a placeholder URL, so we'll show an error.
+      if (imagePreview) {
+        toast({
+          title: 'Cannot process placeholder',
+          description: 'Please upload your own image to generate alt text.',
+          variant: 'destructive',
+        });
+        return;
+      }
       toast({
         title: 'No image selected',
         description: 'Please upload an image to generate alt text.',
@@ -90,7 +100,7 @@ export function ImageAltTextGenerator() {
                 onClick={() => fileInputRef.current?.click()}
               >
                 {imagePreview ? (
-                   <Image src={imagePreview} alt="Image preview" layout="fill" objectFit="contain" className="rounded-lg p-2" data-ai-hint="placeholder image" />
+                   <Image src={imagePreview} alt="Image preview" layout="fill" objectFit="contain" className="rounded-lg p-2" data-ai-hint="business analytics" />
                 ) : (
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <UploadCloud className="w-10 h-10 mb-3 text-muted-foreground" />
@@ -108,6 +118,7 @@ export function ImageAltTextGenerator() {
                   id="image-description"
                   name="description"
                   required
+                  defaultValue="A laptop on a desk showing business intelligence dashboards."
                   placeholder="Briefly describe the image content and context. E.g., 'A developer working on a laptop in a modern office.'"
                   className="mt-1 min-h-[100px]"
                 />

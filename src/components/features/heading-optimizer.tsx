@@ -17,9 +17,16 @@ import { optimizeHeadingsFromUrlAction } from '@/lib/actions';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { CopyButton } from '../copy-button';
 
+const defaultResults = [
+  'H1: AI-Powered SEO & Content Optimization Suite',
+  'H2: Boost Your Rankings with Intelligent Heading Suggestions',
+  'H2: Streamline Your Content Strategy with MarcoPolo',
+  'H2: Why Keyword-Rich Headings Matter for SEO',
+];
+
 export function HeadingOptimizer() {
-  const [url, setUrl] = useState('');
-  const [results, setResults] = useState<string[]>([]);
+  const [url, setUrl] = useState('https://marcopolo.ai/features');
+  const [results, setResults] = useState<string[]>(defaultResults);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 

@@ -16,9 +16,13 @@ import { useToast } from '@/hooks/use-toast';
 import { generateMetaDescriptionAction } from '@/lib/actions';
 import { CopyButton } from '../copy-button';
 
+const defaultContent = `MarcoPolo Media Optimizer is a powerful suite of AI-driven tools designed to enhance your website's SEO and content strategy. From optimizing page speed and generating compelling meta descriptions to suggesting relevant keywords and creating engaging banner text, our platform provides everything you need to improve your online presence. Boost your search engine rankings, attract more traffic, and achieve your marketing goals with our intelligent, easy-to-use solutions.`;
+const defaultResult = "Supercharge your website's performance with MarcoPolo Media Optimizer. Our AI-powered tools help you with SEO, content, and speed optimization. Try it now!";
+
+
 export function MetaDescriptionGenerator() {
-  const [pageContent, setPageContent] = useState('');
-  const [result, setResult] = useState<string>('');
+  const [pageContent, setPageContent] = useState(defaultContent);
+  const [result, setResult] = useState<string>(defaultResult);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 

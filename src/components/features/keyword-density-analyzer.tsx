@@ -22,9 +22,18 @@ interface KeywordDensityResult {
   density: number;
 }
 
+const defaultResults: KeywordDensityResult[] = [
+  { keyword: 'AI optimization', count: 12, density: 2.5 },
+  { keyword: 'SEO tools', count: 10, density: 2.1 },
+  { keyword: 'content strategy', count: 8, density: 1.7 },
+  { keyword: 'digital marketing', count: 7, density: 1.5 },
+  { keyword: 'MarcoPolo Media', count: 6, density: 1.3 },
+  { keyword: 'performance', count: 5, density: 1.1 },
+];
+
 export function KeywordDensityAnalyzer() {
-  const [url, setUrl] = useState('');
-  const [results, setResults] = useState<KeywordDensityResult[]>([]);
+  const [url, setUrl] = useState('https://marcopolo.ai/blog');
+  const [results, setResults] = useState<KeywordDensityResult[]>(defaultResults);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
