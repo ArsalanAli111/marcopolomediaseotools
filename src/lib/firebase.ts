@@ -7,15 +7,15 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "your-api-key",
-  authDomain: "your-auth-domain",
-  projectId: "your-project-id",
-  storageBucket: "your-storage-bucket",
-  messagingSenderId: "your-messaging-sender-id",
-  appId: "your-app-id",
-  measurementId: "your-measurement-id"
+  "projectId": "marcopolo-media-optimizer",
+  "appId": "1:1078894983113:web:149ac4797790b2249f9a18",
+  "storageBucket": "marcopolo-media-optimizer.firebasestorage.app",
+  "apiKey": "AIzaSyAI9XNu24gLdR4YRbL0BOfmD-0uzorgfh4",
+  "authDomain": "marcopolo-media-optimizer.firebaseapp.com",
+  "measurementId": "",
+  "messagingSenderId": "1078894983113"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
