@@ -75,14 +75,14 @@ export function DashboardPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool) => (
-                    <Card key={tool.href} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-colors duration-300">
-                        <CardHeader className="flex flex-row items-start gap-4 p-4">
+                    <Card key={tool.href} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-colors duration-300 text-center">
+                        <CardHeader className="flex flex-col items-center gap-4 p-4 pb-2">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 {tool.icon}
                             </div>
                             <div className="flex-1">
                                 <CardTitle>{tool.title}</CardTitle>
-                                <CardDescription>{tool.description}</CardDescription>
+                                <CardDescription className="mt-2">{tool.description}</CardDescription>
                             </div>
                         </CardHeader>
                         <div className="flex-grow" />
