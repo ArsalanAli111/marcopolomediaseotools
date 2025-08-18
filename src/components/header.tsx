@@ -3,9 +3,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Bot, Captions, FileText, Gauge, Image as ImageIcon, Lightbulb, Megaphone, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const menuItems = [
     { href: "/speed", icon: <Gauge className="h-4 w-4" />, label: "Page Speed" },
@@ -16,6 +22,10 @@ export function Header() {
     { href: "/density", icon: <Search className="h-4 w-4" />, label: "Density" },
     { href: "/banner", icon: <Megaphone className="h-4 w-4" />, label: "Banner" },
   ];
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50">
