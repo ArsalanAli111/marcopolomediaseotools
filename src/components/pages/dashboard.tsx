@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowRight, Bot, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, ShieldCheck, Smile, Tags, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
+import React from "react";
 
 const tools = [
   {
@@ -68,10 +70,18 @@ const slides = [
 ];
 
 export function DashboardPage() {
+    const plugin = React.useRef(
+      Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: true })
+    )
+
     return (
         <div className="space-y-12">
             <section className="relative">
-              <Carousel className="w-full" opts={{ loop: true }}>
+              <Carousel 
+                className="w-full" 
+                opts={{ loop: true }}
+                plugins={[plugin.current]}
+              >
                 <CarouselContent>
                   {slides.map((slide, index) => (
                     <CarouselItem key={index}>
