@@ -47,9 +47,9 @@ const tools = [
 export function DashboardPage() {
     return (
         <div className="space-y-12">
-            <section className="text-center bg-card border rounded-xl p-8 md:p-12 lg:p-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gradient-green">
-                Supercharge Your SEO
+            <section className="text-center bg-[#121212] rounded-xl p-8 md:p-12 lg:p-16">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+                Supercharge Your <span className="text-gradient">SEO</span>
               </h1>
               <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Welcome to MarcoPolo, your all-in-one AI toolkit for dominating search rankings and optimizing your content strategy. Start with a free page speed analysis below.
@@ -69,24 +69,26 @@ export function DashboardPage() {
             </div>
             
             <div className="text-center">
-                 <h2 className="text-3xl font-bold tracking-tight text-gradient-green">All Tools</h2>
+                 <h2 className="text-3xl font-bold tracking-tight text-gradient">All Tools</h2>
                  <p className="text-muted-foreground mt-2">Explore our full suite of optimization tools.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool) => (
-                    <Card key={tool.href} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
-                        <CardHeader className="flex flex-row items-center gap-4">
-                            {tool.icon}
-                            <div>
-                                <CardTitle className="text-xl">{tool.title}</CardTitle>
+                    <Card key={tool.href} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-colors duration-300">
+                        <CardHeader className="flex flex-row items-start gap-4 p-4">
+                            <div className="p-3 bg-primary/10 rounded-lg">
+                                {tool.icon}
+                            </div>
+                            <div className="flex-1">
+                                <CardTitle>{tool.title}</CardTitle>
                                 <CardDescription>{tool.description}</CardDescription>
                             </div>
                         </CardHeader>
                         <div className="flex-grow" />
-                        <div className="p-6 pt-0 mt-auto">
+                        <div className="p-4 pt-0 mt-auto">
                             <Link href={tool.href} passHref>
-                                <Button variant="outline" className="w-full">
+                                <Button variant="outline" className="w-full bg-transparent text-foreground hover:bg-primary/90 hover:text-primary-foreground">
                                     Use Tool <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </Link>

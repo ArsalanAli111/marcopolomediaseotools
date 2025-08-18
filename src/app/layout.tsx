@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="font-body antialiased flex flex-col min-h-screen">
+    <html lang="en" className={`${inter.variable} dark`} suppressHydrationWarning>
+      <body className="font-body antialiased flex flex-col min-h-screen bg-[#121212]">
         <TooltipProvider>
           <Header />
           <main className="flex-grow flex flex-col items-center p-4 sm:p-8 md:p-12">
