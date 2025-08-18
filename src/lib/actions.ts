@@ -7,6 +7,7 @@ import { generateMetaDescription } from '@/ai/flows/generate-meta-descriptions';
 import { optimizeHeadings } from '@/ai/flows/optimize-headings';
 import { suggestAltText } from '@/ai/flows/suggest-alt-text';
 import { analyzePageSpeed } from '@/ai/flows/analyze-page-speed';
+import { analyzeKeywordDensity } from '@/ai/flows/analyze-keyword-density';
 
 export async function generateBannerTextAction(prompt: string) {
   try {
@@ -108,4 +109,19 @@ export async function analyzePageSpeedFromUrlAction(url: string) {
     console.error(error);
     return { error: 'Failed to analyze page speed from URL.' };
   }
+}
+
+export async function analyzeKeywordDensityFromUrlAction(url: string) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            return { error: `Failed to fetch URL: ${response.statusText}` };
+        }
+        const pageContent = await response.text();
+        const result = await analyzeKeywordDensity({ pageContent });
+        return { data: result.results };
+    } catch (error) {
+        console.error(error);
+        return { error: 'Failed to analyze keyword density from URL.' };
+    }
 }

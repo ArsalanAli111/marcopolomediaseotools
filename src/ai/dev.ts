@@ -7,3 +7,4 @@ import '@/ai/flows/suggest-keywords.ts';
 import '@/ai/flows/generate-meta-descriptions.ts';
 import '@/ai/flows/suggest-alt-text.ts';
 import '@/ai/flows/analyze-page-speed.ts';
+import '@/ai/flows/analyze-keyword-density.ts';
