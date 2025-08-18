@@ -1,6 +1,6 @@
 import { SpeedPage } from "@/components/pages/speed";
 
-export default function Home() {
+export default function Speed() {
   return (
     <SpeedPage />
   );
