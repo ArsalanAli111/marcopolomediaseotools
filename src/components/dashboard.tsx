@@ -21,18 +21,21 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 <SidebarContent>
                     <SidebarHeader>
                         <div className="flex items-center gap-2">
-                            <div className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-full p-2">
+                            <div className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-lg p-2">
                                 <Bot className="h-6 w-6" />
                             </div>
-                            <h1 className="font-headline text-xl font-bold text-primary">
-                                MarcoPolo
-                            </h1>
+                            <div>
+                                <h1 className="font-headline text-xl font-bold text-primary">
+                                    MarcoPolo
+                                </h1>
+                                <p className="text-sm text-muted-foreground">Media Optimizer</p>
+                            </div>
                         </div>
                     </SidebarHeader>
                     <SidebarMenu>
                         {menuItems.map((item) => (
                             <SidebarMenuItem key={item.href}>
-                                <SidebarMenuButton href={item.href} isActive={pathname === item.href}>
+                                <SidebarMenuButton href={item.href} isActive={pathname === item.href || (pathname === '/' && item.href === '/speed')}>
                                     {item.icon}
                                     {item.label}
                                 </SidebarMenuButton>
@@ -44,16 +47,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <SidebarInset>
                 <main className="flex min-h-screen flex-col items-center p-4 sm:p-8 md:p-12">
                     <div className="w-full max-w-6xl">
-                        <header className="mb-8 flex items-center justify-between">
+                         <header className="mb-8 flex items-center justify-between md:hidden">
                             <div className="flex items-center gap-4">
-                                <SidebarTrigger className="md:hidden" />
-                                <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-                                    Media Optimizer
+                                <SidebarTrigger/>
+                                <h1 className="font-headline text-2xl font-bold text-primary">
+                                   MarcoPolo
                                 </h1>
                             </div>
-                            <p className="mt-2 text-lg text-foreground/80 hidden md:block">
-                                Your AI-powered toolkit for peak SEO performance.
-                            </p>
                         </header>
                         {children}
                     </div>
