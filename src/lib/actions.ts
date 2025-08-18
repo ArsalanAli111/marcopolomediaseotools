@@ -6,6 +6,7 @@ import { suggestKeywords } from '@/ai/flows/suggest-keywords';
 import { generateMetaDescription } from '@/ai/flows/generate-meta-descriptions';
 import { optimizeHeadings } from '@/ai/flows/optimize-headings';
 import { suggestAltText } from '@/ai/flows/suggest-alt-text';
+import { analyzePageSpeed } from '@/ai/flows/analyze-page-speed';
 
 export async function generateBannerTextAction(prompt: string) {
   try {
@@ -91,5 +92,20 @@ export async function suggestAltTextAction(formData: FormData) {
   } catch (error) {
     console.error(error);
     return { error: "Failed to generate alt text. Please ensure the uploaded file is a valid image." };
+  }
+}
+
+export async function analyzePageSpeedFromUrlAction(url: string) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      return { error: `Failed to fetch URL: ${response.statusText}` };
+    }
+    const pageContent = await response.text();
+    const result = await analyzePageSpeed({ pageContent });
+    return { data: result };
+  } catch (error) {
+    console.error(error);
+    return { error: 'Failed to analyze page speed from URL.' };
   }
 }
