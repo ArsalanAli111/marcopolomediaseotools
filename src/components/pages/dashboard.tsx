@@ -5,6 +5,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import Link from "next/link";
 import { ArrowRight, Bot, Captions, FileText, GalleryHorizontal, ImageIcon, Percent, ShieldCheck, Smile, Tags, Zap } from "lucide-react";
 import { Button } from "../ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 
 const tools = [
   {
@@ -45,24 +46,57 @@ const tools = [
   },
 ];
 
+const slides = [
+  {
+    heading: "The All-in-One SEO Solution Platform",
+    description: "Everything you need to boost rankings, optimize content, and drive more traffic. MarcoPolo provides a complete suite of AI-powered tools for your success.",
+    buttonText: "Analyze Your Site",
+    buttonLink: "#page-speed"
+  },
+  {
+    heading: "Optimize Your Content with AI",
+    description: "From meta descriptions to heading tags, our AI tools help you create content that ranks higher and engages your audience more effectively.",
+    buttonText: "Explore Content Tools",
+    buttonLink: "/meta"
+  },
+  {
+    heading: "Unlock Powerful Keyword Insights",
+    description: "Discover high-impact keywords, analyze their density on your pages, and build a content strategy that puts you ahead of the competition.",
+    buttonText: "Find Keywords",
+    buttonLink: "/keywords"
+  }
+];
+
 export function DashboardPage() {
     return (
         <div className="space-y-12">
-            <section className="text-center bg-[#121212] rounded-xl p-8 md:p-12 lg:p-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
-                The All-in-One <span className="text-gradient">SEO</span> Solution Platform
-              </h1>
-              <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Everything you need to boost rankings, optimize content, and drive more traffic. MarcoPolo provides a complete suite of AI-powered tools for your success.
-              </p>
-              <div className="mt-8 flex justify-center">
-                <Button size="lg" asChild>
-                  <Link href="#page-speed">
-                    Analyze Your Site
-                    <Zap className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
+            <section className="relative">
+              <Carousel className="w-full" opts={{ loop: true }}>
+                <CarouselContent>
+                  {slides.map((slide, index) => (
+                    <CarouselItem key={index}>
+                      <div className="text-center bg-[#121212] rounded-xl p-8 md:p-12 lg:p-16">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+                          <span className="text-gradient">{slide.heading.split(' ').slice(0, 4).join(' ')}</span> {slide.heading.split(' ').slice(4).join(' ')}
+                        </h1>
+                        <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                          {slide.description}
+                        </p>
+                        <div className="mt-8 flex justify-center">
+                          <Button size="lg" asChild>
+                            <Link href={slide.buttonLink}>
+                              {slide.buttonText}
+                              <Zap className="ml-2 h-5 w-5" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+              </Carousel>
             </section>
             
             <div id="page-speed">
