@@ -1,6 +1,8 @@
+'use client';
 import { Sidebar, SidebarContent, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
 import { Bot, Captions, FileText, Gauge, Image as ImageIcon, Lightbulb, Megaphone, Search } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
@@ -35,10 +37,14 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                     <SidebarMenu>
                         {menuItems.map((item) => (
                             <SidebarMenuItem key={item.href}>
-                                <SidebarMenuButton href={item.href} isActive={pathname === item.href || (pathname === '/' && item.href === '/speed')}>
-                                    {item.icon}
-                                    {item.label}
-                                </SidebarMenuButton>
+                                <Link href={item.href} passHref>
+                                    <SidebarMenuButton asChild isActive={pathname === item.href || (pathname === '/' && item.href === '/speed')}>
+                                        <>
+                                            {item.icon}
+                                            {item.label}
+                                        </>
+                                    </SidebarMenuButton>
+                                </Link>
                             </SidebarMenuItem>
                         ))}
                     </SidebarMenu>
