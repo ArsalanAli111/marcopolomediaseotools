@@ -31,7 +31,7 @@ export function Header() {
       <header className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
         <div className="container mx-auto flex h-[110px] items-center justify-between px-4 md:px-6">
            <Link href="/" className="flex items-center gap-2 flex-1">
-             <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={180} height={40} unoptimized />
+             <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={180} height={20} unoptimized />
           </Link>
           <div className="hidden md:flex items-center space-x-6 justify-center flex-1" />
           <div className="flex-1" />
@@ -44,7 +44,7 @@ export function Header() {
     <header className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="container mx-auto flex h-[110px] items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 flex-1">
-          <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={180} height={40} unoptimized />
+          <Image src="https://marcopolomedia.pk/wp-content/uploads/2025/06/69efc38e0ad015cae148ae23f0dd52665334907d.gif" alt="MarcoPolo Media Optimizer Logo" width={180} height={20} unoptimized />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 justify-center flex-1 whitespace-nowrap">
           {menuItems.map((item) => (
