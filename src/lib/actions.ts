@@ -47,6 +47,21 @@ export async function optimizeHeadingsAction(pageContent: string) {
   }
 }
 
+export async function optimizeHeadingsFromUrlAction(url: string) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        return { error: `Failed to fetch URL: ${response.statusText}` };
+      }
+      const pageContent = await response.text();
+      const result = await optimizeHeadings({ pageContent });
+      return { data: result.optimizedHeadings };
+    } catch (error) {
+      console.error(error);
+      return { error: 'Failed to fetch or optimize headings from URL.' };
+    }
+}
+
 const altTextSchema = z.object({
   image: z.instanceof(File),
   description: z.string().min(1, "Description is required."),

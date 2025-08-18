@@ -9,26 +9,26 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Loader2, Wand2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { optimizeHeadingsAction } from '@/lib/actions';
+import { optimizeHeadingsFromUrlAction } from '@/lib/actions';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { CopyButton } from '../copy-button';
 
 export function HeadingOptimizer() {
-  const [pageContent, setPageContent] = useState('');
+  const [url, setUrl] = useState('');
   const [results, setResults] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!pageContent.trim()) {
+    if (!url.trim()) {
       toast({
-        title: 'Content is empty',
-        description: 'Please paste your page content to optimize headings.',
+        title: 'URL is empty',
+        description: 'Please enter a website URL to optimize headings.',
         variant: 'destructive',
       });
       return;
@@ -36,7 +36,7 @@ export function HeadingOptimizer() {
     setIsLoading(true);
     setResults([]);
     
-    const response = await optimizeHeadingsAction(pageContent);
+    const response = await optimizeHeadingsFromUrlAction(url);
 
     if (response.error) {
       toast({
@@ -55,19 +55,20 @@ export function HeadingOptimizer() {
       <CardHeader>
         <CardTitle>Heading Optimizer</CardTitle>
         <CardDescription>
-          Analyze your page content and get keyword-rich heading suggestions (H1, H2) to improve your SEO.
+          Enter a website URL and get keyword-rich heading suggestions (H1, H2) to improve your SEO.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="page-content-headings">Page Content</Label>
-            <Textarea
-              id="page-content-headings"
-              value={pageContent}
-              onChange={(e) => setPageContent(e.target.value)}
-              placeholder="Paste the full text content of your webpage here..."
-              className="mt-1 min-h-[150px]"
+            <Label htmlFor="website-url">Website URL</Label>
+            <Input
+              id="website-url"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              placeholder="https://example.com"
+              className="mt-1"
+              type="url"
             />
           </div>
           <Button type="submit" disabled={isLoading}>
