@@ -151,22 +151,22 @@ export function DashboardPage() {
                   We provide the sharpest tools to help you navigate the digital landscape and conquer search rankings.
                 </p>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                  <div className="flex flex-col items-center space-y-4">
-                    <div className="p-4 bg-primary/10 rounded-full">
+                  <div className="group flex flex-col items-center space-y-4 p-6 rounded-lg bg-secondary/50 hover:bg-secondary/80 transition-all duration-300">
+                    <div className="p-4 bg-primary/10 rounded-full transition-all duration-300 group-hover:scale-110">
                       <Bot className="h-10 w-10 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">AI-Powered Precision</h3>
                     <p className="text-muted-foreground">Harness cutting-edge AI for data-driven SEO recommendations that give you a competitive edge.</p>
                   </div>
-                  <div className="flex flex-col items-center space-y-4">
-                    <div className="p-4 bg-primary/10 rounded-full">
+                  <div className="group flex flex-col items-center space-y-4 p-6 rounded-lg bg-secondary/50 hover:bg-secondary/80 transition-all duration-300">
+                    <div className="p-4 bg-primary/10 rounded-full transition-all duration-300 group-hover:scale-110">
                       <ShieldCheck className="h-10 w-10 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">Comprehensive Toolkit</h3>
                     <p className="text-muted-foreground">Access a full suite of tools covering everything from page speed and meta tags to keyword analysis.</p>
                   </div>
-                  <div className="flex flex-col items-center space-y-4">
-                    <div className="p-4 bg-primary/10 rounded-full">
+                  <div className="group flex flex-col items-center space-y-4 p-6 rounded-lg bg-secondary/50 hover:bg-secondary/80 transition-all duration-300">
+                    <div className="p-4 bg-primary/10 rounded-full transition-all duration-300 group-hover:scale-110">
                       <Smile className="h-10 w-10 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">User-Friendly Interface</h3>
