@@ -87,7 +87,11 @@ export function DashboardPage() {
                     <CarouselItem key={index}>
                       <div className="text-center bg-[#121212] rounded-xl p-8 md:p-12 lg:p-16">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
-                          <span className="text-gradient">{slide.heading.split(' ').slice(0, 4).join(' ')}</span> {slide.heading.split(' ').slice(4).join(' ')}
+                          {slide.heading && (
+                            <>
+                              <span className="text-gradient">{slide.heading.split(' ').slice(0, 4).join(' ')}</span> {slide.heading.split(' ').slice(4).join(' ')}
+                            </>
+                          )}
                         </h1>
                         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                           {slide.description}
@@ -118,7 +122,7 @@ export function DashboardPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool) => (
-                    <Card key={tool.href} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-colors duration-300">
+                    <Card key={tool.href} className="flex flex-col bg-secondary/50 hover:bg-secondary/80 transition-all duration-300 hover:scale-105">
                         <CardHeader className="flex flex-col items-center flex-grow gap-4 p-4 pb-2 text-center">
                             <div className="p-3 bg-primary/10 rounded-lg">
                                 {tool.icon}
