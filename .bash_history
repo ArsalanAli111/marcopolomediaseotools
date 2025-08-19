@@ -42,3 +42,24 @@ git config --global user.name "ArsalanAli111"
 git commit -m "Initial commit of MarcoPolo Media Optimizer"
 git reset
 git add .
+git commit -m "Initial commit of MarcoPolo Media Optimizer"
+git remote add origin https://github.com/ArsalanAli111/MarcopoloMediaSEO-Tools.git
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+pwd          # current directory
+ls -a        # dekho ki .git folder hai ya nahi
+git status   # current repo status
+pwd
+ls -a
+git status
+git commit -m 
+git commit -m
+git commit -m "Merged Firebase export with existing GitHub main branch"
+git push origin main
+.cache/
+*.log
+*.tmp
+.cache/
+*.tmp
+*.log
+git add .
