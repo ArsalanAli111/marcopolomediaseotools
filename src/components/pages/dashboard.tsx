@@ -71,7 +71,7 @@ const slides = [
 
 export function DashboardPage() {
     const plugin = React.useRef(
-      Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: true })
+      Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
     )
 
     return (
