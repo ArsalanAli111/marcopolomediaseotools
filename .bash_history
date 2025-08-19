@@ -63,3 +63,5 @@ git push origin main
 *.tmp
 *.log
 git add .
+git commit -m "Marcopolomedia SEO OPTIMIZER APP"
+git push origin main
