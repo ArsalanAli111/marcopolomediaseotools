@@ -65,3 +65,11 @@ git push origin main
 git add .
 git commit -m "Marcopolomedia SEO OPTIMIZER APP"
 git push origin main
+git add .
+git commit -m "Marcopolomedia SEO Optimizer App"
+git push origin main
+git init
+git remote add origin https://github.com/ArsalanAli111/marcopolomediaseotools.git
+git init
+git remote add origin https://github.com/ArsalanAli111/marcopolomediaseotools.git
+git remote -v
