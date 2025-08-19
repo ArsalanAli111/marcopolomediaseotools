@@ -1,0 +1,27 @@
+2025-07-31 09:49:54.994 [info] Extension host with pid 1232 started
+2025-07-31 09:49:55.029 [error] Error: EEXIST: file already exists, open '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock'
+2025-07-31 09:49:55.048 [info] Lock '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock': Could not acquire lock, checking if the file is stale.
+2025-07-31 09:49:55.050 [info] Lock '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock': The pid 1990 appears to be gone.
+2025-07-31 09:49:55.050 [info] Lock '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock': Deleting a stale lock.
+2025-07-31 09:49:55.057 [info] Lock '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock': Lock acquired.
+2025-07-31 09:49:56.673 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onView:cloudcode.gemini.chatView'
+2025-07-31 09:49:56.674 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-31 09:49:58.344 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-31 09:49:58.687 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-31 09:49:58.687 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-31 09:49:59.391 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onCommand:cloudshell.isAuthorized'
+2025-07-31 09:49:59.468 [info] Eager extensions activated
+2025-07-31 09:49:59.469 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 09:49:59.469 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 09:49:59.470 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 09:50:00.173 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 09:50:00.174 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 09:50:00.185 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 09:50:47.788 [error] unauthorized. cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2025-07-31 09:50:47.796 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 09:50:55.271 [error] unauthorized. cloudshell.authorize {"value":"google.cloud-shell","_lower":"google.cloud-shell"}
+2025-07-31 09:50:55.412 [error] Activating extension googlecloudtools.cloudcode failed due to an error:
+2025-07-31 09:50:55.412 [error] Error: Error calling Cloud Shell Theia Authorization. undefined
+    at t.CloudShellTheiaAuth.<anonymous> (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:9419419)
+    at Generator.throw (<anonymous>)
+    at s (/google/devshell/editor/code-oss-for-cloud-shell/extensions/cloudcode/dist/extension.js:14:9418050)

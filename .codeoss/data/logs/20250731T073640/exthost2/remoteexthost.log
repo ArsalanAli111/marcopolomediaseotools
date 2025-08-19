@@ -1,0 +1,16 @@
+2025-07-31 07:38:34.183 [info] Extension host with pid 1990 started
+2025-07-31 07:38:34.202 [info] Lock '/home/arsalanali865/.codeoss/data/User/workspaceStorage/4d8bfb93/vscode.lock': Lock acquired.
+2025-07-31 07:38:37.055 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-31 07:38:37.057 [info] ExtensionService#_doActivateExtension google.geminicodeassist, startup: false, activationEvent: 'onCommand:cloudcode.gemini.chatView.focus'
+2025-07-31 07:38:38.564 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-31 07:38:39.814 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-31 07:38:39.815 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-31 07:38:40.218 [info] ExtensionService#_doActivateExtension google.cloud-shell, startup: false, activationEvent: 'onCommand:cloudshell.isAuthorized'
+2025-07-31 07:38:40.292 [info] Eager extensions activated
+2025-07-31 07:38:40.292 [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 07:38:40.293 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 07:38:40.293 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-31 07:38:40.784 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 07:38:40.785 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 07:38:40.786 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-31 07:38:45.042 [info] ExtensionService#_doActivateExtension googlecloudtools.cloudcode, startup: false, activationEvent: 'onStartupFinished'
