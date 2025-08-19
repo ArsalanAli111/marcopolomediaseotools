@@ -73,3 +73,17 @@ git remote add origin https://github.com/ArsalanAli111/marcopolomediaseotools.gi
 git init
 git remote add origin https://github.com/ArsalanAli111/marcopolomediaseotools.git
 git remote -v
+git add .
+git commit -m "Initial commit from Firebase project"
+git branch -M main
+git push -u origin main
+git remote set-url origin https://github.com/ArsalanAli111/marcopolomediaseotools.git
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+git pull origin main --allow-unrelated-histories --no-rebase
+git push -u origin main
+git init
+git remote add origin https://github.com/ArsalanAli111/marcopolomediaseotools.git
