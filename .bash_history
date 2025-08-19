@@ -35,3 +35,10 @@ npm run deploy
 run npm
 npm run
 git init -b main
+git add .
+git commit -m "Initial commit of MarcoPolo Media Optimizer"
+git config --global user.email "arsalanali865@gmail.com"
+git config --global user.name "ArsalanAli111"
+git commit -m "Initial commit of MarcoPolo Media Optimizer"
+git reset
+git add .
